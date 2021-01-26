@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        style="@style/LinearLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        tools:context="project.ui.registration.RegistrationActivity">
+
+        <ImageView
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/splash_logo"
+            />
+
+        <TextView
+            style="@style/QuickOK_ActivityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/registration"
+            />
+
+        <EditText
+            android:id = "@+id/email_registration"
+            style="@style/QuickOK_EditTextStyle"
+            android:hint="@string/email_hint"
+        />
+
+        <TextView
+            android:id="@+id/email_error_registration"
+            style="@style/QuickOK_EditTextErrorStyle"
+        />
+
+        <EditText
+            android:id = "@+id/first_name_registration"
+            style="@style/QuickOK_EditTextStyle"
+            android:hint="@string/first_name_hint"
+            />
+
+        <TextView
+            android:id="@+id/first_name_error_registration"
+            style="@style/QuickOK_EditTextErrorStyle"
+        />
+
+        <EditText
+            android:id = "@+id/last_name_registration"
+            style="@style/QuickOK_EditTextStyle"
+            android:hint="@string/last_name_hint"
+            />
+
+        <TextView
+            android:id="@+id/last_name_error_registration"
+            style="@style/QuickOK_EditTextErrorStyle"
+            />
+
+        <EditText
+            android:id = "@+id/password_registration"
+            style="@style/QuickOK_EditTextStyle"
+            android:inputType = "textPassword"
+            android:hint="@string/password_hint"
+            />
+
+        <TextView
+            android:id="@+id/password_error_registration"
+            style="@style/QuickOK_EditTextErrorStyle"
+            />
+
+        <Button
+            android:id = "@+id/registration"
+            style="@style/QuickOK_Button"
+            android:text = "@string/registration"
+            android:onClick="onClickRegistration"
+        />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            >
+
+            <TextView
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="2dp"
+                android:textColor="@color/text"
+                android:text="@string/have_an_account"
+                />
+
+            <TextView
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/link"
+                android:text="@string/login_here"
+                android:onClick="onClickLogin"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

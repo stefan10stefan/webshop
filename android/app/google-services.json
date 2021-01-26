@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "744183343320",
+    "firebase_url": "https://quick-ok.firebaseio.com",
+    "project_id": "quick-ok",
+    "storage_bucket": "quick-ok.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744183343320:android:a9162823c5240e44120fad",
+        "android_client_info": {
+          "package_name": "com.lilly021.quickok"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "744183343320-30o55q1a6vkid81t02tfd52sm42m9c5b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPLFS_U3fzqXrXKIaRN522KNz62DdAZnE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "744183343320-30o55q1a6vkid81t02tfd52sm42m9c5b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
