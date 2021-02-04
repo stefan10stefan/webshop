@@ -3,8 +3,12 @@ package com.service;
 import com.model.Product;
 import com.model.dto.ProductDTO;
 
+import java.util.List;
+
 public interface ProductService {
-    public Product add(ProductDTO product);
-    public Product edit(ProductDTO product);
-    public Product get(Long id);
+    ProductDTO add(ProductDTO product);
+    ProductDTO edit(ProductDTO product);
+    ProductDTO get(Long id);
+
+    List<ProductDTO> search(String term);
 }

@@ -19,6 +19,8 @@ public class Product extends AbstractEntity{
     private double price;
     @ManyToOne
     private Shop shop;
+    @ManyToOne
+    private Cart cart;
 
     public String getName() {
         return name;

@@ -1,5 +1,7 @@
 package com.model.dto;
 
+import com.model.User;
+
 public class UserDTO extends AbstractEntityDTO {
 
     private String email;
@@ -9,6 +11,15 @@ public class UserDTO extends AbstractEntityDTO {
     private String type;
     private Long lat;
     private Long lng;
+
+    public UserDTO(User user) {
+        email = user.getEmail();
+        firstName = user.getFirstName();
+        lastName = user.getLastName();
+        type = user.getType();
+        lat = user.getLat();
+        lng = user.getLng();
+    }
 
     public Long getLat() {
         return lat;

@@ -1,13 +1,23 @@
 package com.model.dto;
 
 
+import com.model.Product;
+
 public class ProductDTO extends AbstractEntityDTO {
 
     private String name;
     private String description;
     private String image;
     private double price;
-    private ShopDTO shop;
+    private Long shopId;
+
+    public ProductDTO(Product product) {
+        name = product.getName();
+        description = product.getDescription();
+        image = product.getImage();
+        price = product.getPrice();
+        shopId = product.getShop() != null ? product.getShop().getId() : -1;
+    }
 
     public String getName() {
         return name;
@@ -41,11 +51,11 @@ public class ProductDTO extends AbstractEntityDTO {
         this.price = price;
     }
 
-    public ShopDTO getShop() {
-        return shop;
+    public Long getShopId() {
+        return shopId;
     }
 
-    public void setShop(ShopDTO shop) {
-        this.shop = shop;
+    public void setShopId(Long shopId) {
+        this.shopId = shopId;
     }
 }

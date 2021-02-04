@@ -5,7 +5,9 @@ import com.model.dto.UserDTO;
 
 public interface UserService {
 
-    public User add(UserDTO user);
-    public User edit(UserDTO user);
-    public User get(Long id);
+    UserDTO add(UserDTO user);
+    UserDTO edit(UserDTO user);
+    UserDTO changePassword(UserDTO user);
+    UserDTO get(Long id);
+    UserDTO getCurrentUser();
 }

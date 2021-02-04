@@ -1,10 +1,13 @@
 package com.service;
 
+import com.config.SecurityUtils;
 import com.model.User;
 import com.model.dto.UserDTO;
 import com.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -13,17 +16,59 @@ public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
 
     @Override
-    public User add(UserDTO user) {
-        return null;
+    public UserDTO add(UserDTO userDTO) {
+
+        User user = new User();
+        user.setEmail(userDTO.getEmail());
+        user.setFirstName(userDTO.getFirstName());
+        user.setLastName(userDTO.getLastName());
+        user.setPassword(userDTO.getPassword());
+        user.setLat(userDTO.getLat());
+        user.setLng(userDTO.getLng());
+        user.setType(userDTO.getType());
+        user.setDeleted(false);
+
+        return new UserDTO(userRepository.save(user));
     }
 
     @Override
-    public User edit(UserDTO user) {
-        return null;
+    public UserDTO edit(UserDTO userDTO) {
+
+        User user = userRepository.getOne(userDTO.getId());
+        user.setFirstName(userDTO.getFirstName());
+        user.setLastName(userDTO.getLastName());
+        user.setLat(userDTO.getLat());
+        user.setLng(userDTO.getLng());
+        user.setType(userDTO.getType());
+
+        return new UserDTO(userRepository.save(user));
     }
 
     @Override
-    public User get(Long id) {
-        return userRepository.getOne(id);
+    public UserDTO changePassword(UserDTO userDTO) {
+
+        User user = userRepository.getOne(userDTO.getId());
+        user.setPassword(userDTO.getPassword());
+
+        return new UserDTO(userRepository.save(user));
     }
+
+    @Override
+    public UserDTO get(Long id) {
+        return new UserDTO(userRepository.getOne(id));
+    }
+
+    @Override
+    public UserDTO getCurrentUser() {
+        Optional<String> username = SecurityUtils.getCurrentUserLogin();
+
+        Optional<User> user = userRepository.findOneByEmail(username.get());
+
+        if(!user.isPresent()) {
+            return null;
+        }
+
+        return new UserDTO(user.get());
+    }
+
 }
