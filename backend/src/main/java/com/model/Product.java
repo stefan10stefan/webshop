@@ -1,9 +1,7 @@
 package com.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="products")
@@ -13,14 +11,19 @@ public class Product extends AbstractEntity{
     private String name;
     @Column
     private String description;
-    @Column
+    @Column(length=1000000000)
     private String image;
     @Column
     private double price;
     @ManyToOne
     private Shop shop;
-    @ManyToOne
-    private Cart cart;
+    @ManyToMany(cascade = { CascadeType.ALL })
+    @JoinTable(
+            name = "cart_product",
+            joinColumns = { @JoinColumn(name = "product_id") },
+            inverseJoinColumns = { @JoinColumn(name = "cart_id") }
+    )
+    private List<Cart> carts;
 
     public String getName() {
         return name;

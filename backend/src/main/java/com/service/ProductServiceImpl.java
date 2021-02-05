@@ -28,6 +28,7 @@ public class ProductServiceImpl implements ProductService {
         Product product = new Product();
         product.setName(productDTO.getName());
         product.setDescription(productDTO.getDescription());
+        product.setPrice(productDTO.getPrice());
         product.setImage(productDTO.getImage());
         product.setShop(shopRepository.getOne(productDTO.getShopId()));
         product.setDeleted(false);
@@ -40,6 +41,7 @@ public class ProductServiceImpl implements ProductService {
 
         Product product = productRepository.getOne(productDTO.getId());
         product.setName(productDTO.getName());
+        product.setPrice(productDTO.getPrice());
         product.setDescription(productDTO.getDescription());
         product.setImage(productDTO.getImage());
         product.setShop(shopRepository.getOne(productDTO.getShopId()));

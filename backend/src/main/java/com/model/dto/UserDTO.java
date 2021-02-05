@@ -12,7 +12,10 @@ public class UserDTO extends AbstractEntityDTO {
     private Long lat;
     private Long lng;
 
+    public UserDTO() {}
+
     public UserDTO(User user) {
+        id = user.getId();
         email = user.getEmail();
         firstName = user.getFirstName();
         lastName = user.getLastName();

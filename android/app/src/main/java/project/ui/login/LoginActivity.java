@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.lilly021.webshop.R;
+import com.lilly021.quickok.R;
 import project.ui.base.BaseActivity;
 import project.ui.main.MainActivity;
 import project.ui.registration.RegistrationActivity;

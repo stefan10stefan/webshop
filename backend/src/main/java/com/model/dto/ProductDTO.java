@@ -11,7 +11,10 @@ public class ProductDTO extends AbstractEntityDTO {
     private double price;
     private Long shopId;
 
+    public ProductDTO() {}
+
     public ProductDTO(Product product) {
+        id = product.getId();
         name = product.getName();
         description = product.getDescription();
         image = product.getImage();

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.lilly021.webshop">
+    package="com.lilly021.quickok">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission. ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -14,7 +16,7 @@
         android:networkSecurityConfig="@xml/network_security_config"
         >
 
-        <activity android:name="project.ui.splash.SplashActivity"
+        <activity android:name=".ui.splash.SplashActivity"
             android:theme="@style/SplashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,10 +25,17 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="project.ui.main.MainActivity"/>
-        <activity android:name="project.ui.login.LoginActivity"/>
-        <activity android:name="project.ui.registration.RegistrationActivity"/>
-        <activity android:name="project.ui.base.BaseActivity"/>
+        <activity android:name=".ui.main.MainActivity"/>
+        <activity android:name=".ui.login.LoginActivity"/>
+        <activity android:name=".ui.registration.RegistrationActivity"/>
+        <activity android:name=".ui.changePassword.ChangePasswordActivity"/>
+        <activity android:name=".ui.base.BaseActivity"/>
+        <activity android:name=".ui.addShop.AddShopActivity"/>
+        <activity android:name=".ui.shops.ShopsActivity"/>
+        <activity android:name=".ui.addProduct.AddProductActivity"/>
+        <activity android:name=".ui.products.ProductsActivity"/>
+        <activity android:name=".ui.viewProduct.ViewProductActivity"/>
+        <activity android:name=".ui.addManager.AddManagerActivity"/>
     </application>
 
 </manifest>

@@ -24,7 +24,7 @@ public class ShopServiceImpl implements ShopService {
         shop.setLng(shopDTO.getLng());
         shop.setDeleted(false);
 
-        return new ShopDTO(shop);
+        return new ShopDTO(shopRepository.save(shop));
     }
 
     @Override
@@ -35,7 +35,7 @@ public class ShopServiceImpl implements ShopService {
         shop.setLat(shopDTO.getLat());
         shop.setLng(shopDTO.getLng());
 
-        return new ShopDTO(shop);
+        return new ShopDTO(shopRepository.save(shop));
     }
 
     @Override
@@ -46,7 +46,15 @@ public class ShopServiceImpl implements ShopService {
     @Override
     public List<ShopDTO> search(String term) {
 
-        List<Shop> shops = shopRepository.findByNameContaining(term);
+        List<Shop> shops;
+
+        if(term == null || term.equals("")) {
+            shops = shopRepository.findAll();
+        }
+        else {
+            shops = shopRepository.findByNameContaining(term);
+        }
+
         List<ShopDTO> shopsDTO = new ArrayList<>();
 
         for(Shop s: shops) {

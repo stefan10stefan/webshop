@@ -45,7 +45,8 @@ public class OAuth2SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(WebSecurity web) {
         web.ignoring()
-                .antMatchers(HttpMethod.OPTIONS, "/**");
+                .antMatchers(HttpMethod.OPTIONS, "/**")
+                .antMatchers(HttpMethod.POST, "/api/user/**");
     }
 
     @Bean

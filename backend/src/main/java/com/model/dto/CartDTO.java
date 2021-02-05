@@ -15,6 +15,8 @@ public class CartDTO {
 
     private List<ProductDTO> products;
 
+    public CartDTO() {}
+
     public CartDTO(Cart cart) {
 
         id = cart.getId();

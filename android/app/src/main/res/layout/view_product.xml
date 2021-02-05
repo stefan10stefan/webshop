@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        style="@style/LinearLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        tools:context=".ui.viewProduct.ViewProductActivity">
+
+        <ImageView
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/product_image"
+            />
+
+        <TextView
+            style="@style/QuickOK_ActivityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/product_name"
+            />
+
+        <TextView
+            android:id="@+id/product_description"
+            style="@style/QuickOK_ActivityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/product_price"
+            style="@style/QuickOK_ActivityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <Button
+            android:id = "@+id/login"
+            style="@style/QuickOK_Button"
+            android:text = "Add to cart"
+            android:onClick="onClickCart"
+            />
+
+        <Spinner
+            android:id="@+id/grade_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id = "@+id/grade"
+            style="@style/QuickOK_Button"
+            android:text = "Grade"
+            android:onClick="onClickGrade"
+            />
+
+    </LinearLayout>
+</ScrollView>

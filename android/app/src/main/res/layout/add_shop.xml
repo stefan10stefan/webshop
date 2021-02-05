@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        style="@style/LinearLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        tools:context=".ui.addShop.AddShopActivity">
+
+        <ImageView
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/splash_logo"
+            />
+
+        <TextView
+            style="@style/QuickOK_ActivityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add shop"
+            />
+
+
+        <EditText
+            android:id = "@+id/name_add_shop"
+            style="@style/QuickOK_EditTextStyle"
+            android:hint="Name"
+            />
+
+        <TextView
+            android:id="@+id/name_error_add_shop"
+            style="@style/QuickOK_EditTextErrorStyle"
+            />
+
+        <EditText
+            android:id = "@+id/lat_add_shop"
+            style="@style/QuickOK_EditTextStyle"
+            android:hint="Lat"
+            />
+
+        <TextView
+            android:id="@+id/lat_error_add_shop"
+            style="@style/QuickOK_EditTextErrorStyle"
+            />
+
+        <EditText
+            android:id = "@+id/lng_add_shop"
+            style="@style/QuickOK_EditTextStyle"
+            android:hint="Lng"
+            />
+
+        <TextView
+            android:id="@+id/lng_error_add_shop"
+            style="@style/QuickOK_EditTextErrorStyle"
+            />
+
+        <Button
+            android:id = "@+id/login"
+            style="@style/QuickOK_Button"
+            android:text = "@string/login"
+            android:onClick="onClickAddShop"
+            />
+
+    </LinearLayout>
+</ScrollView>

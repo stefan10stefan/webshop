@@ -22,6 +22,16 @@ public class UserController {
         return  userService.add(user);
     }
 
+    @PostMapping(path="/manager")
+    public UserDTO addManager(@RequestBody UserDTO user) {
+        return  userService.addManager(user);
+    }
+
+    @PostMapping(path="/change-password")
+    public UserDTO changePassword(@RequestBody UserDTO user) {
+        return  userService.changePassword(user);
+    }
+
     @PutMapping(path="/")
     public UserDTO edit(@RequestBody UserDTO user) {
         return userService.edit(user);

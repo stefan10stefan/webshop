@@ -1,0 +1,41 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        style="@style/LinearLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        tools:context=".ui.addShop.AddShopActivity">
+
+        <TextView
+            style="@style/QuickOK_ActivityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shops"
+            />
+
+        <EditText
+            android:id = "@+id/term_search_shop"
+            style="@style/QuickOK_EditTextStyle"
+            android:hint="Search"
+            />
+
+        <Button
+            android:id = "@+id/login"
+            style="@style/QuickOK_Button"
+            android:text = "Search"
+            android:onClick="searchClick"
+            />
+
+        <ListView
+            android:id="@+id/list_shops"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+        />
+
+    </LinearLayout>
+</ScrollView>

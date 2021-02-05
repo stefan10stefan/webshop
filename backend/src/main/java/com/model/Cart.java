@@ -13,7 +13,7 @@ public class Cart extends AbstractEntity {
     @Column
     private String status;
 
-    @OneToMany(mappedBy="cart")
+    @ManyToMany(mappedBy="carts")
     private List<Product> products;
 
     public User getUser() {

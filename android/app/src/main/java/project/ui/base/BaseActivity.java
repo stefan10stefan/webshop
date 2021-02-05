@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.navigation.NavigationView;
-import com.lilly021.webshop.R;
+import com.lilly021.quickok.R;
 import project.events.BaseEvent;
 import project.injection.component.ActivityComponent;
 import project.injection.component.DaggerActivityComponent;

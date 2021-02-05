@@ -11,23 +11,23 @@ public class Shop extends AbstractEntity{
     @Column
     private String name;
     @Column
-    private Long lat;
+    private double lat;
     @Column
-    private Long lng;
+    private double lng;
 
-    public Long getLat() {
+    public double getLat() {
         return lat;
     }
 
-    public void setLat(Long lat) {
+    public void setLat(double lat) {
         this.lat = lat;
     }
 
-    public Long getLng() {
+    public double getLng() {
         return lng;
     }
 
-    public void setLng(Long lng) {
+    public void setLng(double lng) {
         this.lng = lng;
     }
 

@@ -23,8 +23,6 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/admin/registerAdmin").access("hasAuthority('SUPERADMIN')")
-                .antMatchers("/admin/**").access("hasAuthority('ADMIN') or hasAuthority('SUPERADMIN')")
-                .antMatchers("/customer/**").access("hasAuthority('CUSTOMER')");
+                .antMatchers("/**").access("hasAuthority('USER')");
     }
 }

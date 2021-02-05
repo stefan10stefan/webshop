@@ -2,7 +2,7 @@ package project.ui.main;
 
 import android.os.Bundle;
 
-import com.lilly021.webshop.R;
+import com.lilly021.quickok.R;
 import project.ui.base.BaseActivity;
 
 import javax.inject.Inject;

@@ -1,6 +1,6 @@
 package project.ui.registration;
 
-import com.lilly021.webshop.R;
+import com.lilly021.quickok.R;
 import project.domain.model.User;
 import project.domain.services.DataManager;
 import project.ui.base.BasePresenter;

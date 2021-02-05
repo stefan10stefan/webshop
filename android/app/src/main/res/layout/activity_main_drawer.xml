@@ -9,6 +9,21 @@
             <item android:id="@+id/nav_item_logout"
                 android:title="@string/nav_logout"
             />
+            <item android:id="@+id/nav_item_change_password"
+                android:title="Change password"
+                />
+            <item android:id="@+id/nav_item_add_shop"
+                android:title="Add shop"
+                />
+            <item android:id="@+id/nav_item_shops"
+                android:title="Shops"
+                />
+            <item android:id="@+id/nav_item_products"
+                android:title="Products"
+                />
+            <item android:id="@+id/nav_item_add_manager"
+                android:title="Add manager"
+                />
         </menu>
     </item>
 </menu>
