@@ -36,6 +36,9 @@
             <item android:id="@+id/nav_item_map"
                 android:title="Map"
                 />
+            <item android:id="@+id/nav_settings"
+                android:title="Settings"
+                />
         </menu>
     </item>
 </menu>
