@@ -1,0 +1,35 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        style="@style/LinearLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="top"
+        tools:context=".ui.cart.CartActivity">
+
+        <TextView
+            style="@style/QuickOK_ActivityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cart"
+            />
+
+        <ListView
+            android:id="@+id/cart_list_products"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            />
+
+        <Button
+            android:id = "@+id/buy"
+            style="@style/QuickOK_Button"
+            android:text = "Buy"
+            android:onClick="onClickBuy"
+            />
+
+    </LinearLayout>
+</ScrollView>

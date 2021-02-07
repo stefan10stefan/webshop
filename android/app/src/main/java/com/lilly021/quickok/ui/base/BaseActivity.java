@@ -16,6 +16,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.lilly021.quickok.MapsActivity;
 import com.lilly021.quickok.R;
 import com.lilly021.quickok.events.BaseEvent;
 import com.lilly021.quickok.events.EventType;
@@ -24,8 +25,11 @@ import com.lilly021.quickok.injection.component.DaggerActivityComponent;
 import com.lilly021.quickok.injection.module.ActivityModule;
 import com.lilly021.quickok.ui.addManager.AddManagerActivity;
 import com.lilly021.quickok.ui.addShop.AddShopActivity;
+import com.lilly021.quickok.ui.cart.CartActivity;
 import com.lilly021.quickok.ui.changePassword.ChangePasswordActivity;
+import com.lilly021.quickok.ui.editProfile.EditProfileActivity;
 import com.lilly021.quickok.ui.login.LoginActivity;
+import com.lilly021.quickok.ui.messages.MessagesActivity;
 import com.lilly021.quickok.ui.products.ProductsActivity;
 import com.lilly021.quickok.ui.shops.ShopsActivity;
 import com.lilly021.quickok.ui.splash.SplashActivity;
@@ -108,9 +112,39 @@ public class BaseActivity extends AppCompatActivity {
             case R.id.nav_item_add_manager:
                 addManager();
                 return true;
+            case R.id.nav_item_edit_profile:
+                editProfile();
+                return true;
+            case R.id.nav_item_messages:
+                showMessages();
+                return true;
+            case R.id.nav_item_cart:
+                showCart();
+                return true;
+            case R.id.nav_item_map:
+                showMap();
+                return true;
+
+
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    public void showMap() {
+        startActivity(new Intent(BaseActivity.this, MapsActivity.class));
+    }
+
+    public void showCart() {
+        startActivity(new Intent(BaseActivity.this, CartActivity.class));
+    }
+
+    public void showMessages() {
+        startActivity(new Intent(BaseActivity.this, MessagesActivity.class));
+    }
+
+    public void editProfile() {
+        startActivity(new Intent(BaseActivity.this, EditProfileActivity.class));
     }
 
     public void changePassword() {

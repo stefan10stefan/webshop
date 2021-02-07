@@ -3,10 +3,12 @@ package com.lilly021.quickok.domain.services;
 import com.google.gson.Gson;
 import com.lilly021.quickok.domain.model.AuthResponse;
 import com.lilly021.quickok.domain.model.Cart;
+import com.lilly021.quickok.domain.model.Message;
 import com.lilly021.quickok.domain.model.Product;
 import com.lilly021.quickok.domain.model.Shop;
 import com.lilly021.quickok.domain.model.User;
 import com.lilly021.quickok.domain.model.request.ChangePasswordRequest;
+import com.lilly021.quickok.domain.model.request.EditProfileRequest;
 import com.lilly021.quickok.domain.model.request.LoginRequest;
 import com.lilly021.quickok.domain.model.request.ProductRequest;
 import com.lilly021.quickok.domain.model.request.RegistrationRequest;
@@ -65,6 +67,10 @@ public class DataManager {
         preferenceService.setUser(user);
     }
 
+    public User getUser() {
+        return preferenceService.getUser();
+    }
+
     public void setToken(String token) {
 
         preferenceService.setToken(token);
@@ -78,6 +84,21 @@ public class DataManager {
         return apiServiceManager.getUserService().addUser(new RegistrationRequest(email, password,
                 firstName, lastName));
     }
+
+    public Observable<User> addUserManager(String email, String password, String firstName, String lastName) {
+
+        return apiServiceManager.getUserService().addUserManager(new RegistrationRequest(email, password,
+                firstName, lastName));
+    }
+
+    // Edit profile
+
+    public Observable<User> editProfile(Long id, String firstName, String lastName) {
+
+        return apiServiceManager.getUserService().editProfile(new EditProfileRequest(id,
+                firstName, lastName));
+    }
+
 
     // Logout
 
@@ -137,6 +158,20 @@ public class DataManager {
 
 
         return apiServiceManager.getCartService().addProductCart(productId);
+    }
+
+    public Observable<Cart> getCart() {
+
+        return apiServiceManager.getCartService().getCart();
+    }
+
+    public Observable<Cart> buy() {
+
+        return apiServiceManager.getCartService().buy();
+    }
+
+    public Observable<List<Message>> getMessages() {
+        return apiServiceManager.getMessageService().getMessages();
     }
 
  }

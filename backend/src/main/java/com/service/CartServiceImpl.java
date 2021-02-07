@@ -39,7 +39,7 @@ public class CartServiceImpl implements CartService{
 
         List<CartDTO> carts = new ArrayList<>();
 
-        for(Cart c: cartRepository.findByUserIdAndStatus(currentUser.getId(),
+        for(Cart c: cartRepository.findByUserIdAndStatus(userRepository.getOne(currentUser.getId()),
                 "FINISH")) {
             carts.add(new CartDTO(c));
         }
@@ -56,14 +56,14 @@ public class CartServiceImpl implements CartService{
             return null;
         }
 
-        List<Cart> carts = cartRepository.findByUserIdAndStatus(currentUser.getId(),
+        List<Cart> carts = cartRepository.findByUserIdAndStatus(userRepository.getOne(currentUser.getId()),
                 "ACTIVE");
 
 
         if(carts == null || carts.size() == 0) {
 
             Cart cart = new Cart();
-            cart.setStatus("AKTIVE");
+            cart.setStatus("ACTIVE");
             cart.setUser(userRepository.getOne(currentUser.getId()));
             cart.setDeleted(false);
 
@@ -92,6 +92,14 @@ public class CartServiceImpl implements CartService{
         cart.getProducts().add(product);
 
         cart = cartRepository.save(cart);
+
+        if(product.getCarts() == null) {
+            product.setCarts(new ArrayList<>());
+        }
+
+        product.getCarts().add(cart);
+
+        productRepository.save(product);
 
         return new CartDTO(cart);
     }

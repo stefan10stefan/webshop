@@ -3,6 +3,7 @@ package com.model.dto;
 import com.model.Cart;
 import com.model.Product;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CartDTO {
@@ -13,7 +14,7 @@ public class CartDTO {
 
     private String status;
 
-    private List<ProductDTO> products;
+    private List<ProductDTO> products = new ArrayList<>();
 
     public CartDTO() {}
 

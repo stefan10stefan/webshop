@@ -10,9 +10,12 @@ import com.lilly021.quickok.injection.ActivityContext;
 import com.lilly021.quickok.ui.addManager.AddManagerPresenter;
 import com.lilly021.quickok.ui.addProduct.AddProductPresenter;
 import com.lilly021.quickok.ui.addShop.AddShopPresenter;
+import com.lilly021.quickok.ui.cart.CartPresenter;
 import com.lilly021.quickok.ui.changePassword.ChangePasswordPresenter;
+import com.lilly021.quickok.ui.editProfile.EditProfilePresenter;
 import com.lilly021.quickok.ui.login.LoginPresenter;
 import com.lilly021.quickok.ui.main.MainPresenter;
+import com.lilly021.quickok.ui.messages.MessagesPresenter;
 import com.lilly021.quickok.ui.products.ProductsPresenter;
 import com.lilly021.quickok.ui.registration.RegistrationPresenter;
 import com.lilly021.quickok.ui.shops.ShopsPresenter;
@@ -77,7 +80,16 @@ public class ActivityModule {
     public ViewProductPresenter providesViewProductPresenter() { return new ViewProductPresenter(dataManager); }
 
     @Provides
+    public EditProfilePresenter providesEditProfilePresenter() { return new EditProfilePresenter(dataManager); }
+
+    @Provides
     public AddManagerPresenter providesAddManagerPresenter() { return new AddManagerPresenter(dataManager); }
+
+    @Provides
+    public MessagesPresenter providesMessagesPresenter() { return new MessagesPresenter(dataManager); }
+
+    @Provides
+    public CartPresenter providesCartPresenter() { return new CartPresenter(dataManager); }
 
     @Provides ApiServiceManager providesApiServiceManager() { return apiServiceManager; }
 

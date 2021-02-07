@@ -13,19 +13,11 @@
         android:layout_gravity="center_vertical"
         tools:context=".ui.registration.RegistrationActivity">
 
-        <ImageView
-            android:layout_width = "wrap_content"
-            android:layout_height = "wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="20dp"
-            android:src="@drawable/splash_logo"
-            />
-
         <TextView
             style="@style/QuickOK_ActivityTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/registration"
+            android:text="Add manager"
             />
 
         <EditText
@@ -76,39 +68,9 @@
         <Button
             android:id = "@+id/registration"
             style="@style/QuickOK_Button"
-            android:text = "@string/registration"
+            android:text = "Edit profile"
             android:onClick="onClickRegistration"
             />
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="5dp"
-            >
-
-            <TextView
-                android:textAlignment="center"
-                android:layout_gravity="center_horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginRight="2dp"
-                android:textColor="@color/text"
-                android:text="@string/have_an_account"
-                />
-
-            <TextView
-                android:textAlignment="center"
-                android:layout_gravity="center_horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:textColor="@color/link"
-                android:text="@string/login_here"
-                android:onClick="onClickLogin"
-                />
-
-        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>

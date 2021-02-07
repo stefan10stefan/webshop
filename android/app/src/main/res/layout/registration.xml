@@ -13,14 +13,6 @@
         android:layout_gravity="center_vertical"
         tools:context=".ui.registration.RegistrationActivity">
 
-        <ImageView
-            android:layout_width = "wrap_content"
-            android:layout_height = "wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="20dp"
-            android:src="@drawable/splash_logo"
-            />
-
         <TextView
             style="@style/QuickOK_ActivityTitle"
             android:layout_width="wrap_content"

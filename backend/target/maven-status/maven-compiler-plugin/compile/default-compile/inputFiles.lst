@@ -10,7 +10,9 @@
 /opt/lampp/htdocs/webshop/backend/src/main/java/com/model/Cart.java
 /opt/lampp/htdocs/webshop/backend/src/main/java/com/controller/ProductController.java
 /opt/lampp/htdocs/webshop/backend/src/main/java/com/repository/UserRepository.java
+/opt/lampp/htdocs/webshop/backend/src/main/java/com/service/MessageService.java
 /opt/lampp/htdocs/webshop/backend/src/main/java/com/service/ShopServiceImpl.java
+/opt/lampp/htdocs/webshop/backend/src/main/java/com/controller/MessageController.java
 /opt/lampp/htdocs/webshop/backend/src/main/java/com/config/CustomUserDetailsService.java
 /opt/lampp/htdocs/webshop/backend/src/main/java/com/service/UserServiceImpl.java
 /opt/lampp/htdocs/webshop/backend/src/main/java/com/model/Product.java
@@ -18,12 +20,15 @@
 /opt/lampp/htdocs/webshop/backend/src/main/java/com/model/AbstractEntity.java
 /opt/lampp/htdocs/webshop/backend/src/main/java/com/service/ShopService.java
 /opt/lampp/htdocs/webshop/backend/src/main/java/com/model/dto/UserDTO.java
+/opt/lampp/htdocs/webshop/backend/src/main/java/com/model/Message.java
+/opt/lampp/htdocs/webshop/backend/src/main/java/com/service/MessageServiceImpl.java
 /opt/lampp/htdocs/webshop/backend/src/main/java/com/controller/UserController.java
 /opt/lampp/htdocs/webshop/backend/src/main/java/com/model/User.java
 /opt/lampp/htdocs/webshop/backend/src/main/java/com/model/dto/AbstractEntityDTO.java
 /opt/lampp/htdocs/webshop/backend/src/main/java/com/service/ProductService.java
 /opt/lampp/htdocs/webshop/backend/src/main/java/com/repository/ProductRepository.java
 /opt/lampp/htdocs/webshop/backend/src/main/java/com/WebShopApplication.java
+/opt/lampp/htdocs/webshop/backend/src/main/java/com/repository/MessageRepository.java
 /opt/lampp/htdocs/webshop/backend/src/main/java/com/model/dto/ProductDTO.java
 /opt/lampp/htdocs/webshop/backend/src/main/java/com/config/JpaConfig.java
 /opt/lampp/htdocs/webshop/backend/src/main/java/com/config/AuditorAwareImpl.java

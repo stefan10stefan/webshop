@@ -9,6 +9,7 @@ import android.widget.TextView;
 import com.lilly021.quickok.R;
 import com.lilly021.quickok.ui.base.BaseActivity;
 import com.lilly021.quickok.ui.login.LoginActivity;
+import com.lilly021.quickok.ui.main.MainActivity;
 import com.lilly021.quickok.util.ValidationUtil;
 
 import javax.inject.Inject;
@@ -58,7 +59,7 @@ public class AddManagerActivity extends BaseActivity {
 
         hideLoader();
 
-        startActivity(new Intent(AddManagerActivity.this, LoginActivity.class));
+        startActivity(new Intent(AddManagerActivity.this, MainActivity.class));
 
         finish();
     }

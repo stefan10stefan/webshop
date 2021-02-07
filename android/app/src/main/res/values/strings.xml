@@ -42,5 +42,6 @@
     <string name="first_name_hint">First name</string>
     <string name="last_name_hint">Last name</string>
     <string name="user_exists">User with this email exists</string>
+    <string name="title_activity_maps">Map</string>
 
 </resources>

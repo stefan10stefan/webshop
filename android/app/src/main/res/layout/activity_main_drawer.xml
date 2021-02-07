@@ -12,6 +12,9 @@
             <item android:id="@+id/nav_item_change_password"
                 android:title="Change password"
                 />
+            <item android:id="@+id/nav_item_edit_profile"
+                android:title="Edit profile"
+                />
             <item android:id="@+id/nav_item_add_shop"
                 android:title="Add shop"
                 />
@@ -23,6 +26,15 @@
                 />
             <item android:id="@+id/nav_item_add_manager"
                 android:title="Add manager"
+                />
+            <item android:id="@+id/nav_item_messages"
+                android:title="Messages"
+                />
+            <item android:id="@+id/nav_item_cart"
+                android:title="Cart"
+                />
+            <item android:id="@+id/nav_item_map"
+                android:title="Map"
                 />
         </menu>
     </item>

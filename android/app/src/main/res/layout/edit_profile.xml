@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        style="@style/LinearLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        tools:context=".ui.editProfile.EditProfileActivity">
+
+        <TextView
+            style="@style/QuickOK_ActivityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit profile"
+            />
+
+        <EditText
+            android:id = "@+id/email_registration"
+            style="@style/QuickOK_EditTextStyle"
+            android:hint="@string/email_hint"
+            android:editable="false"
+            />
+
+        <EditText
+            android:id = "@+id/first_name_edit_profile"
+            style="@style/QuickOK_EditTextStyle"
+            android:hint="@string/first_name_hint"
+            />
+
+        <TextView
+            android:id="@+id/first_name_error_edit_profile"
+            style="@style/QuickOK_EditTextErrorStyle"
+            />
+
+        <EditText
+            android:id = "@+id/last_name_edit_profile"
+            style="@style/QuickOK_EditTextStyle"
+            android:hint="@string/last_name_hint"
+            />
+
+        <TextView
+            android:id="@+id/last_name_error_edit_profile"
+            style="@style/QuickOK_EditTextErrorStyle"
+            />
+
+        <TextView
+            android:id="@+id/password_error_edit_profile"
+            style="@style/QuickOK_EditTextErrorStyle"
+            />
+
+        <Button
+            android:id = "@+id/registration"
+            style="@style/QuickOK_Button"
+            android:text = "Edit profile"
+            android:onClick="onClickRegistration"
+            />
+
+    </LinearLayout>
+</ScrollView>

@@ -18,7 +18,7 @@ public class AddManagerPresenter extends BasePresenter {
 
     public void register(String email, String password, String firstName, String lastName) {
 
-        dataManager.registration(email, password, firstName, lastName)
+        dataManager.addUserManager(email, password, firstName, lastName)
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new DisposableObserver<User>() {

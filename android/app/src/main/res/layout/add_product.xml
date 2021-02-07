@@ -12,14 +12,6 @@
         android:layout_gravity="center_vertical"
         tools:context=".ui.addProduct.AddProductActivity">
 
-        <ImageView
-            android:layout_width = "wrap_content"
-            android:layout_height = "wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="20dp"
-            android:src="@drawable/splash_logo"
-            />
-
         <TextView
             style="@style/QuickOK_ActivityTitle"
             android:layout_width="wrap_content"
@@ -71,7 +63,7 @@
         <Button
             android:id = "@+id/login"
             style="@style/QuickOK_Button"
-            android:text = "@string/login"
+            android:text = "Add product"
             android:onClick="onClickAddProduct"
             />
 

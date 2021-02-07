@@ -17,6 +17,7 @@ public class ApiServiceManager {
     private ShopService shopService;
     private ProductService productService;
     private CartService cartService;
+    private MessageService messageService;
     private PreferenceService preferenceService;
 
     @Inject
@@ -24,6 +25,15 @@ public class ApiServiceManager {
     {
         this.preferenceService = preferenceService;
         retrofit = createRetrofit();
+    }
+
+    public MessageService getMessageService() {
+
+        if(messageService == null) {
+            messageService = retrofit.create(MessageService.class);
+        }
+
+        return messageService;
     }
 
     public UserService getUserService() {

@@ -1,6 +1,7 @@
 package com.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -13,8 +14,12 @@ public class Cart extends AbstractEntity {
     @Column
     private String status;
 
-    @ManyToMany(mappedBy="carts")
+    @ManyToMany(mappedBy="carts", fetch = FetchType.EAGER)
     private List<Product> products;
+
+    public Cart() {
+        products = new ArrayList<>();
+    }
 
     public User getUser() {
         return user;
